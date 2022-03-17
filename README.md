@@ -2,7 +2,8 @@
 
 ## Intro
 `gitProject` allows you to quickly download and install student projects for
-local troubleshooting. 
+local troubleshooting. `gitProject` expects two arguments, the link to the repo
+you want to clone, and the name of the directory it should be cloned into. 
 
 **Example**
 ```sh
