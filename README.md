@@ -16,10 +16,11 @@ $ gitProject repoURL folderToCreate
 
 ## About
 Something that tends to eat up a fair chunk of time during project week is the
-process of cloning, installing and setting up a student's application. The
-function that it runs will add extra scripts to their `package.json` as well as
-define a set `.env` for their backend. The `.env` file is configured to use a
-PSQL user and database that are created bu running the install script below.
+process of cloning, installing and setting up a student's application. This 
+project aims to solve that. The function that it runs will add extra scripts to 
+their `package.json` as well as define a set `.env` for their backend. The 
+`.env` file is configured to use a PSQL user and database that are created by 
+running the install script below.
 
 ## Install
 To install this command line utility, you may either download and run the
