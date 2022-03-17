@@ -1,7 +1,7 @@
 {
     add_psql(){
         psql -t -A -c "CREATE USER AAINSTRUCTOR WITH PASSWORD 'password' CREATEDB LOGIN;"
-        psql -t -A -c "CREATE DATABASE AASTUDENT WITH OWNER AAINSTRUCTOR"
+        psql -t -A -c "CREATE DATABASE AASTUDENT WITH OWNER AAINSTRUCTOR;"
     }
 
     add_function(){
