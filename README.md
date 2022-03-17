@@ -45,7 +45,7 @@ remove the function definition. It can be found between comments stating
 PSQL user and database that are created, run these commands:
 ```sh
 psql -t -A -c "DROP DATABASE AASTUDENT;"
-psql -t -A -c "DRP{} USER AAINSTRUCTOR;"
+psql -t -A -c "DROP USER AAINSTRUCTOR;"
 ```
 
 [install]: https://github.com/edenspring/gitProject/blob/main/src/install.sh
