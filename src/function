@@ -4,9 +4,9 @@ function gitProject {
       git clone $1 ./$2
     {
         echo "PORT=5000"
-        echo "DB_USERNAME=AAINSTRUCTOR"
+        echo "DB_USERNAME=aainstructor"
         echo "DB_PASSWORD=password"
-        echo "DB_DATABASE=AASTUDENT"
+        echo "DB_DATABASE=aastudent"
         echo "DB_HOST=localhost"
         echo "JWT_SECRET=U3VwZXJEdXBlclNlY3JldA=="
         echo "JWT_EXPIRES_IN=604800"
