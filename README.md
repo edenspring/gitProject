@@ -35,7 +35,7 @@ MacOS with zsh. If you get output stating `"Unsure of shell, exiting script"`,
 please open an [issue][issues] and give me some information about your setup. 
 
 ## Making it better
-There are plenty of ways to imrpove this utility! If you have some ideas for how
+There are plenty of ways to improve this utility! If you have some ideas for how
 it could be made better don't hesitate to [request a feature][issues] or reach
 out directly. 
 
