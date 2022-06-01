@@ -15,6 +15,7 @@ function gitProject {
     # no way to specify prefix for npx commands, necessitating modifying package
     npm install ./$2/backend
     npm run db:reset --prefix ./$2/backend
+    rm ./$2/frontend/package-lock.json
     npm install ./$2/frontend
     code $2
 }
