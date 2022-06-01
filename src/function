@@ -1,4 +1,3 @@
-
 ##Begin gitProject function
 function gitProject {
       git clone $1 ./$2
@@ -11,13 +10,14 @@ function gitProject {
         echo "JWT_SECRET=U3VwZXJEdXBlclNlY3JldA=="
         echo "JWT_EXPIRES_IN=604800"
     } > ./$2/backend/.env
-    sed -i -e '/"scripts":/a \    "db:migrate": "dotenv sequelize-cli db:migrate",\n\    "db:migrate:undo:all": "dotenv sequelize-cli db:migrate:undo:all",\n\    "db:redo": "npm run db:seed:undo:all && npm run db:migrate:undo:all && npm run db:migrate && npm run db:seed:all", \n\    "db:seed:all": "dotenv sequelize-cli db:seed:all",\n\    "db:seed:undo:all": "dotenv sequelize-cli db:seed:undo:all",\n\    "db:drop": "dotenv sequelize-cli db:drop",\n\    "db:create": "dotenv sequelize-cli db:create", \n\    "db:reset": "npm run db:drop && npm run db:create && npm run db:migrate && npm run db:seed:all",' ./$2/backend/package.json
+    sed -i'.original' -e '/"scripts":/a \    "db:migrate": "dotenv sequelize-cli db:migrate",\n\    "db:migrate:undo:all": "dotenv sequelize-cli db:migrate:undo:all",\n\    "db:redo": "npm run db:seed:undo:all && npm run db:migrate:undo:all && npm run db:migrate && npm run db:seed:all", \n\    "db:seed:all": "dotenv sequelize-cli db:seed:all",\n\    "db:seed:undo:all": "dotenv sequelize-cli db:seed:undo:all",\n\    "db:drop": "dotenv sequelize-cli db:drop",\n\    "db:create": "dotenv sequelize-cli db:create", \n\    "db:reset": "npm run db:drop && npm run db:create && npm run db:migrate && npm run db:seed:all",' ./$2/backend/package.json
     # no way to specify prefix for npx commands, necessitating modifying package
     npm install ./$2/backend
     npm run db:reset --prefix ./$2/backend
     cd $2/frontend
+    rm package-lock.json
     npm install
-    cd ..
+    cd ../..
     code $2
 }
 ##End gitProject function
